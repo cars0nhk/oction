@@ -1,0 +1,76 @@
+.price{
+    color:green;
+}
+.counter{
+    color: red;
+}
+.progress-bar {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.latest-product{
+    border-radius: 0px;
+    height: 300px;
+    background-image: url('https://static4.gamespot.com/uploads/original/1568/15683559/3201601-nintendo-switch-review-promo.jpg');
+    background-position:center;
+    background-repeat: none;
+    background-size: 100%;
+}
+h3 .badge{
+    font-size: 18px;
+    font-weight: 100;
+}
+@media (max-width: 992px){
+    .latest-product{
+    height: 200px;
+}
+}
+.badge{
+    border-radius: 0px;
+}
+.latest-badge{
+    position: absolute;
+    top:0px;
+    left: 30px;
+}
+.latest-div{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 100%;
+}
+.profile-pic-div{
+    
+    margin-left: 0px;
+}
+.profile-pic{
+    position: absolute;
+    bottom: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
+.bid-reply{
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    color:#fff;
+}
+.bid-reply-div{
+    margin-left: 50px;
+    margin-right: 30px;
+}
+.credits{
+    padding-top: 20px ;
+}
+.desc{
+    padding-bottom: 20px;
+}
+.price{
+    font-weight: 700;
+    font-size: 20px;
+}

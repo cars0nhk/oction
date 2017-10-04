@@ -1,0 +1,18 @@
+<h3>Upcoming Auctions</h3>
+<div class="row">
+  <div *ngFor="let product of products" class="col-lg-4">
+  <div class="latest-product">
+    <span class="badge badge-success latest-badge" *ngIf="product.type=='REGULAR'">{{product.type}}</span>
+    <span class="badge badge-danger latest-badge" *ngIf="product.type=='REPID'">{{product.type}}</span>
+    <div class="latest-product-pic" [ngStyle]="{'background-image': 'url('+product.img+')'}">
+      <img class="card-img-top card-img-bottom" src="" alt="">
+    </div>
+    <div class="card-block">
+      <h4 class="card-title">{{product.name}}</h4>
+      <fa [name]="'usd'"></fa> Retail Price: HK$ {{product.price}}
+      <br>
+      <fa [name]="'clock-o'"></fa> {{product.time}}
+  </div>
+  </div>
+</div>
+</div>

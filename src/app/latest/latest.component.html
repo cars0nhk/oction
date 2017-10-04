@@ -1,0 +1,38 @@
+
+  <div class="row">
+    <div class="col-lg-6 latest-product">
+      <img class="card-img-top card-img-bottom" src="" alt="">
+      <h3><span class="badge badge-success latest-badge">Regular</span></h3>
+      <div class="latest-div row">
+        <div class="profile-pic-div" *ngIf="bid_status">
+          <img src="{{profile_pic}}" alt="" class="profile-pic">
+        </div>
+        <div class="col bid-reply-div">
+         <h4> <span class="badge badge-success" *ngIf="!reply">{{username}}</span></h4>
+          <span class="badge badge-success" *ngIf="reply">{{username}}</span>
+          <div class="bid-reply" *ngIf="reply">{{reply}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <h2>{{product_name}}</h2>
+      <div class="desc">{{product_desc}}</div>
+      <div class="row number">
+        <div class="col price">HK${{price_label}}</div>
+        <div class="col">+ Shipping</div>
+        <div class="col"><fa [name]="'user'"></fa> {{people_bid}}</div>
+      </div>
+      <div class="progress">
+  <div class="progress-bar bg-danger" role="progressbar"  [style.width.%]="remain_precent" aria-valuemin="0"></div>
+</div>
+      <div class="counter">
+         {{count_down}} remaining
+      </div>
+        <div class="row credits">
+          <div class="col-6">{{user_credits}} Credits Left</div>
+          <div class="col-6 text-right"><a href=#>Buy Credit</a></div>
+        </div>
+      <input type="text" class="form-control" maxlength="40" id="username" placeholder="Add message within 40 characters (if any)" [(ngModel)]="bid_reply">
+      <button type="button" class="btn btn-success btn-block" (click)="bid()">PLACED BID -1 CREDIT</button>
+    </div>
+  </div>
